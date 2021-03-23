@@ -1,21 +1,115 @@
 body {
   margin: 0;
-  padding: 30px;
   font-family: $font-family-sans-serif;
-  background-color: $uoc-bg;
+  background-color: $curriculum-bg;
   color: $uoc-corporate;
 }
 
-.uoc-logo {
+%list {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+%titulo {
+  font-weight: 500;
+  font-size: 1.5em;
+  border-bottom: 1px solid black;
   display: block;
-  margin-bottom: 20px;
-  width: 300px;
-  height: auto;
 }
 
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 36px;
-  font-weight: 700;
-  color: $uoc-corporate;
+.curriculum {
+  &__contenido {
+    margin-top: 3%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  &__info {
+    background-color: $curriculum-header;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__foto {
+    width: 200px;
+    height: 200px;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.contacto {
+  margin-right: 5%;
+  line-height: 1.5;
+
+  &__element {
+    list-style-type: none;
+  }
+
+  &__nombre {
+    list-style-type: none;
+    font-weight: bold;
+  }
+
+  &__trabajo {
+    list-style-type: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__link {
+    text-decoration: none;
+
+    &:hover {
+      color: black;
+      text-decoration: underline 1px solid black;
+    }
+  }
+}
+
+.educacion {
+  line-height: 1.6rem;
+
+  &__titulo {
+    @extend %titulo;
+  }
+
+  &__element {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__titulacion {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__fecha {
+    font-size: 0.9rem;
+  }
+}
+
+.experiencia {
+  &__titulo {
+    @extend %titulo;
+  }
+}
+
+.intereses {
+  &__titulo {
+    @extend %titulo;
+  }
+
+  &__element {
+    list-style-type: "\2713";
+  }
+}
+
+.competencias {
+  &__titulo {
+    @extend %titulo;
+  }
 }
