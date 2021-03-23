@@ -1,8 +1,10 @@
-body {
+body,
+html {
   margin: 0;
   font-family: $font-family-sans-serif;
-  background-color: $curriculum-bg;
-  color: $uoc-corporate;
+  background-color: $white;
+  color: $black;
+  height: 100vh;
 }
 
 %list {
@@ -18,29 +20,37 @@ body {
 }
 
 .curriculum {
+  display: flex;
+  height: 100%;
+
+  @media all and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   &__contenido {
     margin-top: 3%;
     margin-right: 5%;
     margin-left: 5%;
+    flex: 80%;
   }
   &__info {
-    background-color: $curriculum-header;
+    background-color: $blue-dark;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    flex: 20%;
+    padding: 20px;
   }
 
   &__foto {
     width: 200px;
     height: 200px;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
 }
 
 .contacto {
-  margin-right: 5%;
   line-height: 1.5;
 
   &__element {
@@ -96,6 +106,16 @@ body {
   &__titulo {
     @extend %titulo;
   }
+
+  &__element {
+    list-style-type: none;
+  }
+
+  &__nombre {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
 }
 
 .intereses {
@@ -109,6 +129,31 @@ body {
 }
 
 .competencias {
+  &__titulo {
+    @extend %titulo;
+  }
+
+  &__lista {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__element {
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: $blue-light;
+    list-style-type: none;
+    width: fit-content;
+    margin: 10px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.descripcion {
   &__titulo {
     @extend %titulo;
   }
