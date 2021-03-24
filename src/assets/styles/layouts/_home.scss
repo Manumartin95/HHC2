@@ -3,7 +3,6 @@ html {
   margin: 0;
   font-family: $font-family-sans-serif;
   background-color: $white;
-  color: $black;
   height: 100vh;
 }
 
@@ -15,7 +14,7 @@ html {
 %titulo {
   font-weight: 500;
   font-size: 1.5em;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid $dark-blue;
   display: block;
 }
 
@@ -26,20 +25,35 @@ html {
   @media all and (max-width: 768px) {
     flex-direction: column;
   }
+}
+.contenido {
+  margin-top: 3%;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex: 80%;
 
-  &__contenido {
-    margin-top: 3%;
-    margin-right: 5%;
-    margin-left: 5%;
-    flex: 80%;
+  &__titulo {
+    color: $dark-blue;
+    @extend %titulo;
   }
-  &__info {
-    background-color: $blue-dark;
+}
+
+.about-me {
+  background-color: $dark-blue;
+  padding: 4em;
+  color: $white;
+
+  &__main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 20%;
-    padding: 20px;
+  }
+  &__nombre {
+    font-size: 1.5em;
+  }
+
+  &__work {
+    font-size: 1.2em;
   }
 
   &__foto {
@@ -53,37 +67,53 @@ html {
 .contacto {
   line-height: 1.5;
 
+  &__list {
+    padding: 0;
+  }
+
+  &__title {
+    @extend %titulo;
+    border-bottom: 2px solid $white;
+  }
+
   &__element {
+    margin: 0.5rem;
     list-style-type: none;
-  }
+    display: flex;
+    align-items: center;
 
-  &__nombre {
-    list-style-type: none;
-    font-weight: bold;
-  }
-
-  &__trabajo {
-    list-style-type: none;
-    font-size: 1.2rem;
-    font-weight: bold;
+    .fas {
+      margin-right: 0.5rem;
+    }
   }
 
   &__link {
     text-decoration: none;
+    color: $white;
 
     &:hover {
-      color: black;
-      text-decoration: underline 1px solid black;
+      font-weight: bold;
     }
+  }
+}
+
+.intereses {
+  &__title {
+    @extend %titulo;
+    border-bottom: 2px solid $white;
+  }
+
+  &__lista {
+    display: flex;
+    flex-flow: column wrap;
+  }
+  &__element {
+    list-style-type: disclosure-closed;
   }
 }
 
 .educacion {
   line-height: 1.6rem;
-
-  &__titulo {
-    @extend %titulo;
-  }
 
   &__element {
     list-style-type: none;
@@ -93,20 +123,16 @@ html {
 
   &__titulacion {
     margin-top: 10px;
+    margin-bottom: 0;
     font-size: 1.2rem;
-    font-weight: bold;
   }
 
   &__fecha {
-    font-size: 0.9rem;
+    font-style: italic;
   }
 }
 
 .experiencia {
-  &__titulo {
-    @extend %titulo;
-  }
-
   &__element {
     list-style-type: none;
   }
@@ -114,47 +140,52 @@ html {
   &__nombre {
     margin-top: 10px;
     font-weight: bold;
+    margin-bottom: 0;
     font-size: 1.2rem;
   }
+
+  &__fecha {
+    font-style: italic;
+  }
 }
 
-.intereses {
-  &__titulo {
-    @extend %titulo;
-  }
-
+.labores {
   &__element {
-    list-style-type: "\2713";
+    list-style-type: square;
   }
 }
-
 .competencias {
-  &__titulo {
-    @extend %titulo;
-  }
-
   &__lista {
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
   }
 
   &__element {
+    list-style: none;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 50px;
-    background-color: $blue-light;
-    list-style-type: none;
-    width: fit-content;
     margin: 10px;
 
     &:hover {
       opacity: 0.8;
     }
   }
-}
 
-.descripcion {
-  &__titulo {
-    @extend %titulo;
+  &__bar {
+    background: $dark-blue;
+    height: 5px;
+    border-radius: 50px;
+  }
+
+  &__total-bar {
+    background: $gray;
+    @media all and (min-width: 768px) {
+      max-width: 50%;
+    }
+  }
+
+  &__percentage {
+    color: $dark-blue;
+    margin-right: 5px;
   }
 }

@@ -20,83 +20,128 @@
     -->
     <div class="curriculum">
 
-      <section class="curriculum__info">
-        <img src="./assets/images/user.png" alt="Foto de usuario" class="curriculum__foto">
-        <ul class="contacto">
-          <li class="contacto__nombre">Nombre Apellidos</li>
-          <li class="contacto__trabajo">Ingeniero Informático</li>
-          <li class="contacto__element">Teléfono: +34 666123123</li>
-          <li class="contacto__element">Ubicación: Lorem, ipsum dolor.</li>
-          <li class="contacto__element">Correo electrónico: loremipsum@dolor.com</li>
-          <li class="contacto__element"><a href="#" class="contacto__link">Linkedin</a></li>
-        </ul>
-      </section>
+      <div class="about-me">
+        <div class="about-me__main">
+          <img src="./assets/images/user.png" alt="Foto de usuario" class="about-me__foto">
+          <h1 class="about-me__nombre">Manuel Martín</h1>
+          <h2 class="about-me__work">Ingeniero Informático</h2>
+        </div>
+        <div class="contacto">
+          <h3 class="contacto__title">CONTACTO</h3>
+          <ul class="contacto__list">
+            <li class="contacto__element">
+              <i class="fas fa-phone"></i>
+              +34 666123123</li>
+            <li class="contacto__element">
+              <i class="fas fa-map-marker-alt"></i>
+              Gran Canaria, Islas Canarias
+            </li>
+            <li class="contacto__element">
+              <i class="fas fa-envelope"></i>
+              mmartinramos@uoc.edu
+            </li>
+            <li class="contacto__element">
+              <i class="fas fa-phone"></i>
+              <a href="#" class="contacto__link">Linkedin</a></li>
+          </ul>
+        </div>
+        <div class="intereses">
+          <h3 class="intereses__title">INTERESES</h3>
+          <ul class="intereses__lista">
+            <li class="intereses__element">Deporte</li>
+            <li class="intereses__element">Viajar</li>
+            <li class="intereses__element">Aprender</li>
+          </ul>
+        </div>
+      </div>
 
-      <div class="curriculum__contenido">
+      <main class="contenido">
         <section class="descripcion">
-          <span class="descripcion__titulo">Resumen</span>
+          <h3 class="contenido__titulo">OBJETIVOS</h3>
           <p class="descripcion__texto">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta doloremque omnis illum, et quam, delectus libero labore ex id vitae corrupti qui deserunt. Eum, numquam. Laboriosam quidem aliquam sint. Quos molestiae, quae veniam tenetur ad omnis aut inventore consectetur autem nostrum ab labore dicta iusto suscipit amet commodi velit saepe veritatis necessitatibus quibusdam? Vitae voluptas modi delectus perferendis corporis at id necessitatibus ut? Unde, nostrum. Cupiditate a accusantium illo ducimus repellat. Numquam quis consequatur voluptate suscipit dolor, ea qui hic minus modi dignissimos repudiandae illum sunt! Incidunt, magni! Cumque nemo commodi nisi itaque architecto consequatur alias voluptatum deserunt dolor?
           </p>
         </section>
         <section class="competencias">
-          <span class="competencias__titulo">Competencias</span>
+          <h3 class="contenido__titulo">COMPETENCIAS</h3>
           <ul class="competencias__lista">
             <li class="competencias__element">
-              Trabajo en equipo
+              <span class="competencias__percentage">80%</span> HTML
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 80%;"></div>
+              </div>
             </li>
             <li class="competencias__element">
-              Manejo del estrés
+              <span class="competencias__percentage">60%</span> CSS
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 60%;"></div>
+              </div>
             </li>
             <li class="competencias__element">
-              Inglés B2
+              <span class="competencias__percentage">85%</span> JAVASCRIPT
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="competencias__element">
+              <span class="competencias__percentage">65%</span> ANGULAR
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 65%;"></div>
+              </div>
+            <li class="competencias__element">
+              <span class="competencias__percentage">65%</span> MONGODB 
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 65%;"></div>
+              </div>
+            <li class="competencias__element">
+              <span class="competencias__percentage">80%</span> VSCODE
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="competencias__element">
+              <span class="competencias__percentage">75%</span> NODE
+              <div class="competencias__total-bar">
+                <div class="competencias__bar" style="width: 75%;"></div>
+              </div>
             </li>
           </ul>
         </section>
   
         <section class="experiencia">
-          <span class="experiencia__titulo">Experiencia</span>
+          <h3 class="contenido__titulo">EXPERIENCIA</h3>
           <ul class="experiencia__lista">
             <li class="experiencia__element">
-              <p class="experiencia__nombre">Lorem, ipsum dolor.</p>
-              <p class="experiencia__fecha">Septiembre de 2020 - Octubre de 2020</p>
+              <h4 class="experiencia__nombre">Prácticas realizadas en BDKapital</h4>
+              <span class="experiencia__fecha">Septiembre de 2019 - Diciembre de 2019</span>
               <ul class="labores">
                 <li class="labores__element">Desarrollo de aplicaciones en Angular</li>
                 <li class="labores__element">Desarrollo Javascript</li>
                 <li class="labores__element">Diseño de base de datos</li>
+                <li class="labores__element">Diseño WordPress</li>
+                <li class="labores__element">Desarrollo de Back-end en Python</li>
               </ul>
             </li>
           </ul>
         </section>
   
         <section class="educacion">
-          <span class="educacion__titulo">Educación</span>
+          <h3 class="contenido__titulo">EDUCACIÓN</h3>
           <ul class="educacion__lista">
             <li class="educacion__element">
-              <span class="educacion__titulacion">Grado en Ingeniería Informática</span>
+              <h4 class="educacion__titulacion">Grado en Ingeniería Informática</h4>
               <span class="educacion__fecha">Septiembre de 2016 - Diciembre de 2020</span>
               <span class="educacion__suceso">Universidad de las Palmas de Gran Canaria</span>
             </li>
   
             <li class="educacion__element">
-              <span class="educacion__titulacion">Máster en desarrollo de aplicaciones web</span>
+              <h4 class="educacion__titulacion">Máster en desarrollo de aplicaciones web</h4>
               <span class="educacion__fecha">Diciembre de 2020 - Diciembre de 2021</span>
               <span class="educacion__suceso">Universidad Oberta de Catalunya</span>
             </li>
           </ul>
         </section>
-  
-  
-  
-        <section class="intereses">
-          <span class="intereses__titulo">Intereses</span>
-          <ul class="intereses__lista">
-            <li class="intereses__element">Lorem ipsum dolor sit amet consectetur.</li>
-            <li class="intereses__element">Lorem, ipsum.</li>
-            <li class="intereses__element">Lorem ipsum dolor sit.</li>
-          </ul>
-        </section>  
-      </div>
+      </main>
       
     </div>
 
