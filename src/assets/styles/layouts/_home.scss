@@ -20,16 +20,13 @@ html {
 
 .curriculum {
   display: flex;
-  height: 100%;
 
   @media all and (max-width: 768px) {
     flex-direction: column;
   }
 }
 .contenido {
-  margin-top: 3%;
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 5%;
   flex: 80%;
 
   &__titulo {
