@@ -6,17 +6,16 @@ html {
   height: 100vh;
 }
 
-%list {
-  display: flex;
-  flex-flow: column wrap;
-}
-
 %titulo {
   font-weight: 500;
   font-size: 1.5em;
   border-bottom: 2px solid $dark-blue;
   display: block;
 }
+
+/*
+  #CURRICULUM
+*/
 
 .curriculum {
   display: flex;
@@ -25,15 +24,10 @@ html {
     flex-direction: column;
   }
 }
-.contenido {
-  margin: 5%;
-  flex: 80%;
 
-  &__titulo {
-    color: $dark-blue;
-    @extend %titulo;
-  }
-}
+/*
+  #ABOUT ME
+*/
 
 .about-me {
   background-color: $dark-blue;
@@ -49,7 +43,7 @@ html {
     font-size: 1.5em;
   }
 
-  &__work {
+  &__trabajo {
     font-size: 1.2em;
   }
 
@@ -61,6 +55,10 @@ html {
   }
 }
 
+/*
+  #CONTACTO
+*/
+
 .contacto {
   line-height: 1.5;
 
@@ -68,7 +66,7 @@ html {
     padding: 0;
   }
 
-  &__title {
+  &__titulo {
     @extend %titulo;
     border-bottom: 2px solid $white;
   }
@@ -79,7 +77,8 @@ html {
     display: flex;
     align-items: center;
 
-    .fas {
+    .fas,
+    .fab {
       margin-right: 0.5rem;
     }
   }
@@ -94,8 +93,12 @@ html {
   }
 }
 
+/*
+  #INTERESES
+*/
+
 .intereses {
-  &__title {
+  &__titulo {
     @extend %titulo;
     border-bottom: 2px solid $white;
   }
@@ -109,6 +112,24 @@ html {
   }
 }
 
+/*
+  #CONTENIDO
+*/
+
+.contenido {
+  margin: 5%;
+  flex: 80%;
+
+  &__titulo {
+    color: $dark-blue;
+    @extend %titulo;
+  }
+}
+
+/*
+  #EDUCACION
+*/
+
 .educacion {
   line-height: 1.6rem;
 
@@ -119,6 +140,7 @@ html {
   }
 
   &__titulacion {
+    color: $dark-blue-lighter;
     margin-top: 10px;
     margin-bottom: 0;
     font-size: 1.2rem;
@@ -129,28 +151,10 @@ html {
   }
 }
 
-.experiencia {
-  &__element {
-    list-style-type: none;
-  }
+/*
+  #COMPETENCIAS
+*/
 
-  &__nombre {
-    margin-top: 10px;
-    font-weight: bold;
-    margin-bottom: 0;
-    font-size: 1.2rem;
-  }
-
-  &__fecha {
-    font-style: italic;
-  }
-}
-
-.labores {
-  &__element {
-    list-style-type: square;
-  }
-}
 .competencias {
   &__lista {
     padding: 0;
@@ -162,27 +166,55 @@ html {
     list-style: none;
     font-weight: bold;
     margin: 10px;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   &__bar {
     background: $dark-blue;
     height: 5px;
     border-radius: 50px;
+
+    &:hover {
+      background: lighten($dark-blue, 15);
+    }
   }
 
   &__total-bar {
     background: $gray;
     @media all and (min-width: 768px) {
-      max-width: 50%;
+      max-width: 60%;
     }
   }
 
   &__percentage {
     color: $dark-blue;
     margin-right: 5px;
+  }
+}
+
+/*
+  #EXPERIENCIA
+*/
+
+.experiencia {
+  &__element {
+    list-style-type: none;
+  }
+
+  &__nombre {
+    margin-top: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+    color: $dark-blue-lighter;
+  }
+
+  &__fecha {
+    font-style: italic;
+  }
+}
+
+.labores {
+  &__element {
+    list-style-type: square;
   }
 }

@@ -5,14 +5,8 @@ $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
-$uoc-corporate: #000078;
-$uoc-masterbrand: #73edff;
-$uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
-
 $gray: #bdbdbd;
-$curriculum-bg: #efefef;
-$blue-light: #e0f7fa;
-$blue-dark: #aec4c7;
 $black: #4f4f4f;
 $white: #fff;
 $dark-blue: #283593;
+$dark-blue-lighter: color.scale($dark-blue, $lightness: 10%);
